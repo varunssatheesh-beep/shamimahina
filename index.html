@@ -16,15 +16,6 @@
   <!-- Custom luxury golden dot cursor -->
   <div class="custom-cursor" id="customCursor"></div>
 
-  <!-- Ambient Soundscape -->
-  <audio id="ambientAudio" loop preload="auto">
-    <!-- Placeholder for background audio -->
-  </audio>
-
-  <!-- Floating music play button -->
-  <button id="musicStartBtn" aria-label="Play wedding music" style="display:flex; position:fixed; bottom:28px; right:28px; z-index:99998; align-items:center; gap:10px; background:linear-gradient(135deg,#D4AF37,#f0d080); color:#0A4A2F; border:none; border-radius:50px; padding:13px 22px; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:1px; box-shadow:0 8px 30px rgba(201,169,97,0.45); cursor:pointer; animation: musicPulse 2s ease-in-out infinite;">
-    🎵 Play Music
-  </button>
 
   <!-- ===== NAVIGATION ===== -->
   <nav id="navbar">
@@ -425,6 +416,14 @@
           </button>
         </form>
       </div>
+
+      <!-- Live RSVPs Display -->
+      <div style="margin-top: 40px; max-width: 760px; margin-left: auto; margin-right: auto; text-align: left;">
+        <h3 style="color: #0A4A2F; font-family: 'Playfair Display', serif; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 10px; margin-bottom: 20px;">Live RSVPs</h3>
+        <div id="rsvpDisplay" style="display: flex; flex-direction: column; gap: 15px; max-height: 400px; overflow-y: auto; padding-right: 10px;">
+          <p style="color: #666; font-style: italic;">Loading RSVPs...</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -492,13 +491,14 @@
       <p class="section-sub">Archana Auditorium, Kalluvettankuzhi, Vizhinjam</p>
     </div>
     
-    <div class="qr-wrapper reveal">
+    <div class="qr-wrapper reveal" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <!-- Venue 1 -->
       <div class="qr-card geometric-map-frame" id="qrCardTilt">
         <div class="qr-venue-photo">
           <img src="images/archana.jpg" alt="Archana Auditorium" />
           <div class="qr-venue-overlay" style="background: rgba(10, 74, 47, 0.8);">
             <h3>Archana Auditorium</h3>
-            <p>Vizhinjam</p>
+            <p>Nikah Venue</p>
           </div>
         </div>
         <div class="qr-code-block">
@@ -509,16 +509,37 @@
             <div class="qr-corner qr-bl"></div>
             <div class="qr-corner qr-br"></div>
             <a href="https://maps.app.goo.gl/sfjvA1DcZQwTRmNQ6" target="_blank">
-              <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.app.goo.gl/sfjvA1DcZQwTRmNQ6&color=0A4A2F&bgcolor=FFFDF9&margin=10"
-                alt="QR Code - Directions"
-                class="qr-img"
-              />
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.app.goo.gl/sfjvA1DcZQwTRmNQ6&color=0A4A2F&bgcolor=FFFDF9&margin=10" alt="QR Code" class="qr-img" />
             </a>
           </div>
-          <p class="qr-sub">Or click the QR code to open in Google Maps</p>
-          <a href="https://maps.app.goo.gl/sfjvA1DcZQwTRmNQ6" target="_blank" class="directions-btn" style="border-color:#0A4A2F; color:#0A4A2F;">
-            🗺️ Open in Google Maps
+          <a href="https://maps.app.goo.gl/sfjvA1DcZQwTRmNQ6" target="_blank" class="directions-btn" style="border-color:#0A4A2F; color:#0A4A2F; margin-top:15px;">
+            🗺️ Google Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Venue 2 -->
+      <div class="qr-card geometric-map-frame" id="qrCardTilt2">
+        <div class="qr-venue-photo">
+          <img src="images/balakrishna.jpg" alt="Balakrishna Kalyana Mandapam" />
+          <div class="qr-venue-overlay" style="background: rgba(10, 74, 47, 0.8);">
+            <h3>Balakrishna Mandapam</h3>
+            <p>Reception Venue</p>
+          </div>
+        </div>
+        <div class="qr-code-block">
+          <p class="qr-label">📍 Scan to Navigate</p>
+          <div class="qr-frame">
+            <div class="qr-corner qr-tl"></div>
+            <div class="qr-corner qr-tr"></div>
+            <div class="qr-corner qr-bl"></div>
+            <div class="qr-corner qr-br"></div>
+            <a href="https://maps.app.goo.gl/qmaiaEEyK84PK5dZ9" target="_blank">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.app.goo.gl/qmaiaEEyK84PK5dZ9&color=0A4A2F&bgcolor=FFFDF9&margin=10" alt="QR Code" class="qr-img" />
+            </a>
+          </div>
+          <a href="https://maps.app.goo.gl/qmaiaEEyK84PK5dZ9" target="_blank" class="directions-btn" style="border-color:#0A4A2F; color:#0A4A2F; margin-top:15px;">
+            🗺️ Google Maps
           </a>
         </div>
       </div>

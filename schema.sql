@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS rsvps (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    phone TEXT,
+    attendees TEXT,
+    events TEXT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);

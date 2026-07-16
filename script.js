@@ -14,29 +14,7 @@
   }
 })();
 
-// ===== AMBIENT SOUNDSCAPE =====
-(function initAmbientAudio() {
-  var audio = document.getElementById('ambientAudio');
-  var btn   = document.getElementById('musicStartBtn');
-  if (!audio) return;
 
-  function startMusic() {
-    audio.play().then(function() {
-      // Music playing — hide the button
-      if (btn) btn.style.display = 'none';
-    }).catch(function() {});
-  }
-
-  // Button tap — guaranteed to work everywhere
-  if (btn) {
-    btn.addEventListener('click', function() {
-      startMusic();
-    });
-  }
-
-  // Also try silently on load (works on Chrome desktop with prior engagement)
-  startMusic();
-})();
 
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
@@ -426,6 +404,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===== RSVP FORM CONTROLLER =====
 (function initRSVP() {
   const form = document.getElementById('rsvpForm');
+  const display = document.getElementById('rsvpDisplay');
+
+  async function loadRSVPs() {
+    if (!display) return;
+    try {
+      const res = await fetch('/api/rsvp');
+      const data = await res.json();
+      if (data && data.length > 0) {
+        let html = '';
+        data.forEach(r => {
+          html += `<div style="background: rgba(255,255,255,0.4); padding: 10px 15px; border-radius: 8px; border-left: 3px solid #0A4A2F;">
+                     <strong style="color:#0A4A2F;">${r.name}</strong> <span style="font-size:0.85rem; color:#666;">(${r.attendees} attending)</span>
+                     <div style="font-size:0.8rem; color:#555;">Events: ${r.events}</div>
+                   </div>`;
+        });
+        display.innerHTML = html;
+      } else {
+        display.innerHTML = '<p style="color: #666; font-style: italic;">Be the first to RSVP!</p>';
+      }
+    } catch (err) {
+      display.innerHTML = '<p style="color: red; font-style: italic;">Could not load live RSVPs.</p>';
+    }
+  }
+
+  // Load initially
+  loadRSVPs();
+
   if (!form) return;
 
   form.addEventListener('submit', async function(e) {
@@ -435,7 +440,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const phoneVal = document.getElementById('rsvp-phone').value.trim();
     const attendeesVal = document.getElementById('rsvp-attendees').value;
     const eventsVal = document.getElementById('rsvp-events').value;
-    const foodVal = document.getElementById('rsvp-food').value;
 
     if (!nameVal) return;
 
@@ -452,8 +456,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           name: nameVal,
           phone: phoneVal,
           attendees: attendeesVal,
-          events: eventsVal,
-          food: foodVal
+          events: eventsVal
         })
       });
 
@@ -463,12 +466,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         alert(`Thank you, ${nameVal}! Your RSVP has been received. ☪️`);
         triggerBurst();
         form.reset();
+        loadRSVPs();
       } else {
         alert("RSVP Error: " + (resData.error || "Failed to submit RSVP"));
       }
     } catch (err) {
       console.error("RSVP API error:", err);
-      alert(`Thank you, ${nameVal}! Your RSVP has been logged successfully (Offline fallback). ☪️`);
+      alert(`Thank you, ${nameVal}! Your RSVP has been logged locally (Offline fallback). ☪️`);
       triggerBurst();
       form.reset();
     } finally {
