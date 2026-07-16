@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Royal Temple | Varsha &amp; Akhil Wedding Invitation</title>
+  <meta name="description" content="Celebrate the wedding of Dr. Varsha S and Akhil P J on October 25, 2026. A digital temple to their love story." />
+  <link rel="icon" type="image/jpeg" href="images/BRIDE.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Malayalam:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20" />
+</head>
+<body>
+
+  <!-- Custom luxury golden dot cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- Ambient Soundscape - plays on first user touch/click -->
+  <audio id="ambientAudio" loop preload="auto">
+    <source src="/Ringtone/sita-kalyana-vaibhogame.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating music play button - always visible, hides once music plays -->
+  <button id="musicStartBtn" aria-label="Play wedding music" style="display:flex; position:fixed; bottom:28px; right:28px; z-index:99998; align-items:center; gap:10px; background:linear-gradient(135deg,#c9a961,#f0d080); color:#0b1b3d; border:none; border-radius:50px; padding:13px 22px; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:1px; box-shadow:0 8px 30px rgba(201,169,97,0.45); cursor:pointer; animation: musicPulse 2s ease-in-out infinite;">
+    🎵 Play Music
+  </button>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-logo">🪷 V &amp; A</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#couple">Couple</a></li>
+      <li><a href="#pre-wedding">Pre-Wedding</a></li>
+      <li><a href="#events">Ceremonies</a></li>
+      <li><a href="#love-journey">Our Journey</a></li>
+      <li><a href="#wishes">Guest Book</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION (Immersive Viewport) ===== -->
+  <section id="hero">
+    <!-- full-screen desaturated background video of waterfalls -->
+    <div class="hero-video-container">
+      <iframe src="https://www.youtube.com/embed/TeO374JpPWk?autoplay=1&mute=1&controls=0&loop=1&playlist=TeO374JpPWk&playsinline=1&enablejsapi=1&showinfo=0&rel=0&iv_load_policy=3" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen 
+              class="hero-video-bg youtube-bg">
+      </iframe>
+      <div class="hero-video-overlay"></div>
+    </div>
+    
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content">
+      <!-- Pristine high-resolution Lord Ganesha center top -->
+      <div class="hero-ganesha">
+        <img src="images/ganesha.png" alt="Lord Ganesha" class="ganesha-img-center" />
+      </div>
+
+      <p class="sanskrit-blessing">ॐ श्री गणेशाय नमः</p>
+
+      <!-- Monumental Countdown Timer in gold with a pulsing celestial glow -->
+      <div class="countdown-wrapper temple-hero-countdown">
+        <div class="countdown" id="countdown">
+          <div class="count-block-text">
+            <span id="cd-days">00</span>
+            <label>DAYS</label>
+          </div>
+          <div class="count-sep-text">:</div>
+          <div class="count-block-text">
+            <span id="cd-hours">00</span>
+            <label>HOURS</label>
+          </div>
+          <div class="count-sep-text">:</div>
+          <div class="count-block-text">
+            <span id="cd-mins">00</span>
+            <label>MINUTES</label>
+          </div>
+          <div class="count-sep-text">:</div>
+          <div class="count-block-text">
+            <span id="cd-secs">00</span>
+            <label>SECONDS</label>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Huge, elegant Playfair Display couple names -->
+      <div class="temple-hero-names">
+        <h1 class="bride-name-hero">Dr. Varsha S</h1>
+        <div class="temple-hero-and">&amp;</div>
+        <h1 class="groom-name-hero">Akhil P J</h1>
+      </div>
+
+      <!-- Unavoidably visible bottom venue overlay -->
+      <div class="temple-hero-venue">
+        <a href="https://maps.app.goo.gl/YhMqnr7tsKcxkpPFA" target="_blank" class="venue-link-overlay">
+          <span class="venue-icon">📍</span>
+          <span class="venue-text">RDR Convention Centre, Edappazhinji, Thiruvananthapuram</span>
+          <span class="venue-arrow">➔</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-down" id="scrollDown">
+      <div class="scroll-arrow">▼</div>
+      <span>Scroll to Canvas</span>
+    </div>
+  </section>
+
+  <!-- ===== DUAL OVERLAPPING INFINITE SCROLLING MARQUEES ===== -->
+  <div class="dual-marquees-container">
+    <div class="marquee-ribbon ribbon-top">
+      <div class="marquee-track-l2r" id="marqueeTop">
+        <span>SHUBH VIVAH ✦ DR. VARSHA S &amp; AKHIL P J ✦ OCTOBER 25, 2026 ✦ SHUBH VIVAH ✦ DR. VARSHA S &amp; AKHIL P J ✦ OCTOBER 25, 2026 ✦ SHUBH VIVAH ✦ DR. VARSHA S &amp; AKHIL P J ✦ OCTOBER 25, 2026 ✦</span>
+      </div>
+    </div>
+    <div class="marquee-ribbon ribbon-bottom">
+      <div class="marquee-track-r2l" id="marqueeBottom">
+        <span>RDR CONVENTION CENTRE ✦ TRIVANDRUM ✦ BLESSINGS &amp; LOVE ✦ RDR CONVENTION CENTRE ✦ TRIVANDRUM ✦ BLESSINGS &amp; LOVE ✦ RDR CONVENTION CENTRE ✦ TRIVANDRUM ✦ BLESSINGS &amp; LOVE ✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COUPLE SECTION (Circular Frames, Parent Details Only) ===== -->
+  <section id="couple" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">The Couple</h2>
+      <p class="section-sub">Destined by Stars, Bound by Love</p>
+    </div>
+    
+    <div class="temple-couple-container">
+      <!-- Bride Spread (Circular Portrait Frame) -->
+      <div class="temple-couple-spread bride-spread reveal">
+        <div class="temple-couple-photo-frame bride-frame circular-frame">
+          <img src="images/BRIDE.jpg" alt="Dr. Varsha S - Bride" class="temple-couple-img" />
+          <div class="temple-gold-border"></div>
+        </div>
+        <div class="temple-couple-info">
+          <span class="temple-badge">The Bride</span>
+          <h2 class="couple-title-name">Dr. Varsha S</h2>
+          <p class="couple-lineage">D/o Adv. Satheesh Kumar S &amp; Mrs. Smitha S Nair</p>
+          <div class="line-divider"></div>
+          <p class="couple-description">
+            A compassionate doctor and a radiant daughter, Varsha brings warmth, grace, and light into every life she touches. She stands ready to cross the threshold into a beautiful union rooted in family traditions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Groom Spread (Circular Portrait Frame) -->
+      <div class="temple-couple-spread groom-spread reveal">
+        <div class="temple-couple-photo-frame groom-frame circular-frame">
+          <img src="images/GROOM.jpg" alt="Akhil P J - Groom" class="temple-couple-img" />
+          <div class="temple-gold-border"></div>
+        </div>
+        <div class="temple-couple-info">
+          <span class="temple-badge">The Groom</span>
+          <h2 class="couple-title-name">Akhil P J</h2>
+          <p class="couple-lineage">S/o Mr. Pradeep Kumar R &amp; Mrs. Jayasree O</p>
+          <span class="groom-job-tag">IT Sector • Infosys</span>
+          <div class="line-divider"></div>
+          <p class="couple-description">
+            Working in the IT sector at Infosys, Akhil brings a sharp mind and a caring heart. He is prepared to embark on this lifetime journey of partnership and mutual growth with his beautiful bride.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRE-WEDDING EVENTS SECTION (Special Invitees Only) ===== -->
+  <section id="pre-wedding" class="section section-prewedding">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Pre-Wedding Celebrations</h2>
+      <p class="section-sub">Private Sacred Ceremonies</p>
+    </div>
+    
+    <div class="pre-wedding-grid">
+      <!-- Haldi & Mehendi coming soon card -->
+      <div class="pre-wedding-card reveal">
+        <div class="pre-card-badge">Special Invitees Only</div>
+        <div class="pre-card-icon">🌿</div>
+        <h3 class="pre-card-title">Haldi &amp; Mehendi</h3>
+        <p class="pre-card-text">Traditional turmeric paste ceremony and intricate henna design celebration for the bride.</p>
+        <div class="pre-card-footer">
+          <span class="pre-status">To Be Announced</span>
+        </div>
+      </div>
+
+      <!-- Sangeet coming soon card -->
+      <div class="pre-wedding-card reveal">
+        <div class="pre-card-badge">Special Invitees Only</div>
+        <div class="pre-card-icon">💃</div>
+        <h3 class="pre-card-title">Sangeet &amp; Dance</h3>
+        <p class="pre-card-text">An evening of music, dance, and celebration with close family members and friends.</p>
+        <div class="pre-card-footer">
+          <span class="pre-status">To Be Announced</span>
+        </div>
+      </div>
+
+      <!-- Bride to be party coming soon card -->
+      <div class="pre-wedding-card reveal">
+        <div class="pre-card-badge">Special Invitees Only</div>
+        <div class="pre-card-icon">🥂</div>
+        <h3 class="pre-card-title">Bride-to-Be Party</h3>
+        <p class="pre-card-text">A private celebration to shower our beautiful bride with blessings and laughter.</p>
+        <div class="pre-card-footer">
+          <span class="pre-status">To Be Announced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORIZONTAL SCROLL CAROUSEL EVENTS ===== -->
+  <section id="events" class="section section-alt">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">The Ceremonies</h2>
+      <p class="section-sub">Join us for every sacred moment</p>
+    </div>
+
+    <div class="carousel-outer-container">
+      <button class="carousel-control prev-slide" id="carouselPrev" aria-label="Previous Slide">‹</button>
+      
+      <div class="events-carousel-wrapper">
+        <div class="events-carousel-track" id="eventsCarousel">
+          
+          <!-- 1. Bride Reception -->
+          <div class="carousel-card main-event reveal">
+            <div class="card-venue-img"><img src="images/venue.jpg" alt="RDR Convention Centre" /></div>
+            <div class="card-header-block">
+              <span class="card-badge">Public Event</span>
+              <div class="event-massive-date highlighted-date">OCT 24</div>
+              <h3 class="event-name">Bride's Reception</h3>
+            </div>
+            <div class="card-body-block">
+              <p class="event-time">⏰ 4:30 PM – 9:30 PM</p>
+              <p class="event-venue">📍 RDR Convention Centre, Mini Hall</p>
+              <p class="event-location">Edappazhinji, Thiruvananthapuram</p>
+              <p class="mapped-distance">🚗 Distance from Temple: ~3.8 km</p>
+            </div>
+            <div class="card-actions-block">
+              <a href="https://maps.app.goo.gl/YhMqnr7tsKcxkpPFA" target="_blank" class="event-map-btn">🗺️ Navigate Location</a>
+            </div>
+          </div>
+
+          <!-- 2. Thalikettu -->
+          <div class="carousel-card sacred-event reveal">
+            <div class="card-venue-img"><img src="images/venue.jpg" alt="Sree Udiyanoor Devi Temple" style="filter: sepia(30%)" /></div>
+            <div class="card-header-block">
+              <span class="card-badge">Family Event</span>
+              <div class="event-massive-date highlighted-date-gold">OCT 25</div>
+              <h3 class="event-name">Thalikettu</h3>
+            </div>
+            <div class="card-body-block">
+              <p class="event-time">⏰ 8:30 AM</p>
+              <p class="event-venue">🛕 Sree Udiyanoor Devi Temple</p>
+              <p class="event-location">Maruthankuzhy, Thiruvananthapuram</p>
+              <p class="mapped-distance">🚗 Central Auspicious Ceremony</p>
+            </div>
+            <div class="card-actions-block">
+              <p class="event-note">The holiest moment of tying the Thali.</p>
+            </div>
+          </div>
+
+          <!-- 3. Grand Wedding -->
+          <div class="carousel-card main-event highlight-event reveal">
+            <div class="card-venue-img"><img src="images/venue.jpg" alt="RDR Convention Centre" /></div>
+            <div class="card-header-block">
+              <span class="card-badge">Grand Celebration</span>
+              <div class="event-massive-date highlighted-date-gold">OCT 25</div>
+              <h3 class="event-name">Grand Wedding</h3>
+            </div>
+            <div class="card-body-block">
+              <p class="event-time">⏰ 10:30 AM onwards</p>
+              <p class="event-venue">📍 RDR Convention Centre</p>
+              <p class="event-location">Edappazhinji, Thiruvananthapuram</p>
+              <p class="mapped-distance">🚗 Distance from Temple: ~3.8 km</p>
+            </div>
+            <div class="card-actions-block">
+              <a href="https://maps.app.goo.gl/YhMqnr7tsKcxkpPFA" target="_blank" class="event-map-btn gold-btn">🗺️ Navigate Location</a>
+            </div>
+          </div>
+
+          <!-- 4. Maruveed Ceremony -->
+          <div class="carousel-card personal-event reveal">
+            <div class="card-venue-img"><img src="images/venue-rk.jpg" alt="RK Convention Centre" /></div>
+            <div class="card-header-block">
+              <span class="card-badge">Special Invitees</span>
+              <div class="event-massive-date">OCT 26</div>
+              <h3 class="event-name">Maruveed Ceremony</h3>
+            </div>
+            <div class="card-body-block">
+              <p class="event-venue">📍 RK Convention Centre</p>
+              <p class="event-location">Mailom, Kollam</p>
+              <p class="mapped-distance">🚗 Private Homecoming Ceremony</p>
+            </div>
+            <div class="card-actions-block">
+              <p class="event-note">Homecoming celebrations for the newlyweds.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="carousel-control next-slide" id="carouselNext" aria-label="Next Slide">›</button>
+    </div>
+  </section>
+
+  <!-- ===== LOVE STORY TIMELINE SECTION (The Star of the Show) ===== -->
+  <section id="love-journey" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Our Journey</h2>
+      <p class="section-sub">Milestones Written in the Stars</p>
+    </div>
+
+    <div class="journey-timeline-container">
+      <div class="journey-timeline-line">
+        <div class="journey-progress" id="journeyProgress"></div>
+      </div>
+
+      <!-- 1. First Meet -->
+      <div class="journey-item left reveal">
+        <div class="journey-marker">🛕</div>
+        <div class="journey-card">
+          <span class="journey-date">June 22, 2025</span>
+          <h3 class="journey-title">First Meet</h3>
+          <p class="journey-location">📍 Sree Udiyanoor Devi Temple</p>
+          <p class="journey-desc">Two paths crossed under the divine blessings of the Goddess. The beginning of a lifetime bond.</p>
+        </div>
+      </div>
+
+      <!-- 2. Pennukanal -->
+      <div class="journey-item right reveal">
+        <div class="journey-marker">🌸</div>
+        <div class="journey-card">
+          <span class="journey-date">June 29, 2025</span>
+          <h3 class="journey-title">Official Pennukanal</h3>
+          <p class="journey-desc">A beautiful traditional custom where families met, blessings were shared, and smiles aligned.</p>
+        </div>
+      </div>
+
+      <!-- 3. Urappikal -->
+      <div class="journey-item left reveal">
+        <div class="journey-marker">🤝</div>
+        <div class="journey-card">
+          <span class="journey-date">July 2025</span>
+          <h3 class="journey-title">Urappikal Ceremony</h3>
+          <p class="journey-desc">The official word was given. Both families unitedly decided to bind their children in holy matrimony.</p>
+        </div>
+      </div>
+
+      <!-- 4. Valayidal -->
+      <div class="journey-item right reveal">
+        <div class="journey-marker">✨</div>
+        <div class="journey-card">
+          <span class="journey-date">August 24, 2025</span>
+          <h3 class="journey-title">Valayidal Ceremony</h3>
+          <p class="journey-desc">The sacred gold bangles were presented, symbolizing the official welcome of the bride-to-be.</p>
+        </div>
+      </div>
+
+      <!-- 5. Engagement -->
+      <div class="journey-item left reveal">
+        <div class="journey-marker">💍</div>
+        <div class="journey-card">
+          <span class="journey-date">October 18, 2025</span>
+          <h3 class="journey-title">The Engagement</h3>
+          <p class="journey-desc">Rings were exchanged, promises made, and forever began in the presence of family and friends.</p>
+        </div>
+      </div>
+
+      <!-- 6. Marriage -->
+      <div class="journey-item right reveal">
+        <div class="journey-marker">🪷</div>
+        <div class="journey-card journey-highlight-card">
+          <span class="journey-date">October 25, 2026</span>
+          <h3 class="journey-title">The Marriage</h3>
+          <p class="journey-location">📍 RDR Convention Centre</p>
+          <p class="journey-desc">Dr. Varsha and Akhil tie the knot in a grand ceremony, stepping into a lifetime of shared dreams.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== POETIC INTERSECTING STORY ===== -->
+  <section id="love-story" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-sub">A divine spark</p>
+    </div>
+    <div class="love-story-card">
+      <div class="love-story-icon">💞</div>
+      <p class="love-story-text">
+        Two paths, guided by fate, converged beautifully when they found each other through 
+        <strong>Kerala Matrimony</strong> 🪷 a modern testament to a timeless bond. 
+        What began as an aligned search quickly blossomed into a deep, poetic love story. 
+        United by stars, blessed by parents, and bound by the sacred threads of tradition, 
+        <em>Dr. Varsha</em> and <em>Akhil</em> are now stepping into their most beautiful chapter 🪷 a lifetime of shared dreams.
+      </p>
+      <div class="story-flowers">🌸 🪷 🌸</div>
+    </div>
+  </section>
+
+  <!-- ===== ENGAGEMENT VIDEO (Fluid Warp Mask) ===== -->
+  <section id="engagement-video" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Our Engagement Story</h2>
+      <p class="section-sub">A beautiful beginning — captured forever</p>
+    </div>
+    <div class="video-wrapper reveal">
+      <div class="video-frame warp-mask">
+        <video id="engagementVideo" controls playsinline>
+          <source src="videos/engagement.mp4" type="video/mp4">
+        </video>
+        <div class="video-no-file" id="videoPlaceholder">
+          <div class="no-video-icon">🎬</div>
+          <h3>Engagement Video</h3>
+          <p>Place your video at <code>videos/engagement.mp4</code></p>
+          <p class="upload-hint">Your magical moments will shine right here 💕</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENGAGEMENT GALLERY (Immersive Coffee-Table Book Slider) ===== -->
+  <section id="engagement-gallery" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Engagement Gallery</h2>
+      <p class="section-sub">October 18, 2025 — Cherished Coffee-Table Moments</p>
+    </div>
+
+    <div class="eng-slider-wrapper reveal">
+      <div class="eng-slider" id="engSlider">
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng1.jpg')"></div>
+          <img src="images/engagement/eng1.jpg" alt="Dr. Varsha S - Radiant in Gold" loading="lazy" />
+          <div class="eng-slide-caption">Dr. Varsha S — Radiant in Gold 🌸</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng2.jpg')"></div>
+          <img src="images/engagement/eng2.jpg" alt="Varsha and Akhil - Sacred Swing" loading="lazy" />
+          <div class="eng-slide-caption">Together on the Sacred Swing 💞</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng3.jpg')"></div>
+          <img src="images/engagement/eng3.jpg" alt="The Sacred Ring Exchange" loading="lazy" />
+          <div class="eng-slide-caption">The Sacred Ring Exchange 💍</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng4.jpg')"></div>
+          <img src="images/engagement/eng4.jpg" alt="Blessed by Family, Bound by Love" loading="lazy" />
+          <div class="eng-slide-caption">Blessed by Family, Bound by Love 🪷</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng5.jpg')"></div>
+          <img src="images/engagement/eng5.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Cherished Moments ✨</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng6.jpg')"></div>
+          <img src="images/engagement/eng6.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Divine Beginnings 🪔</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng7.jpg')"></div>
+          <img src="images/engagement/eng7.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Love & Laughter ❤️</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng8.jpg')"></div>
+          <img src="images/engagement/eng8.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Perfect Together 👩‍❤️‍👨</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng9.jpg')"></div>
+          <img src="images/engagement/eng9.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">A Beautiful Journey Begins 🌅</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng10.jpg')"></div>
+          <img src="images/engagement/eng10.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Stepping into Forever 👣</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng11.jpg')"></div>
+          <img src="images/engagement/eng11.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Endless Love 💖</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng12.jpg')"></div>
+          <img src="images/engagement/eng12.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Joyful Hearts 💕</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng13.jpg')"></div>
+          <img src="images/engagement/eng13.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Together is a Beautiful Place 🏰</div>
+        </div>
+        <div class="eng-slide">
+          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng14.jpg')"></div>
+          <img src="images/engagement/eng14.jpg" alt="Engagement Moment" loading="lazy" />
+          <div class="eng-slide-caption">Forever & Always ♾️</div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="eng-arrow eng-prev" id="engPrev" aria-label="Previous">&#10094;</button>
+      <button class="eng-arrow eng-next" id="engNext" aria-label="Next">&#10095;</button>
+
+      <!-- Dot / Progress Indicators -->
+      <div class="eng-dots" id="engDots">
+        <span class="eng-dot active" data-idx="0"></span>
+        <span class="eng-dot" data-idx="1"></span>
+        <span class="eng-dot" data-idx="2"></span>
+        <span class="eng-dot" data-idx="3"></span>
+        <span class="eng-dot" data-idx="4"></span>
+        <span class="eng-dot" data-idx="5"></span>
+        <span class="eng-dot" data-idx="6"></span>
+        <span class="eng-dot" data-idx="7"></span>
+        <span class="eng-dot" data-idx="8"></span>
+        <span class="eng-dot" data-idx="9"></span>
+        <span class="eng-dot" data-idx="10"></span>
+        <span class="eng-dot" data-idx="11"></span>
+        <span class="eng-dot" data-idx="12"></span>
+        <span class="eng-dot" data-idx="13"></span>
+      </div>
+
+      <!-- Date Badge & Counter -->
+      <div class="eng-date-badge">💍 Engagement • October 18, 2025</div>
+      <div class="eng-counter" id="engCounter">1 / 14</div>
+    </div>
+  </section>
+
+  <!-- ===== FAMILY SECTION (Parents Only, Clean Presentation) ===== -->
+  <section id="family" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Our Parents</h2>
+      <p class="section-sub">Two families, one beautiful union</p>
+    </div>
+
+    <div class="family-grid">
+      <!-- Bride's Family -->
+      <div class="family-card reveal">
+        <div class="family-card-header bride-header">
+          <div class="family-icon">👰</div>
+          <h3>Bride's Parents</h3>
+          <p class="family-name-title">Dr. Varsha S</p>
+        </div>
+        <div class="family-members">
+          <div class="member">
+            <span class="member-role">Father</span>
+            <span class="member-name">Adv. Satheesh Kumar S</span>
+          </div>
+          <div class="member">
+            <span class="member-role">Mother</span>
+            <span class="member-name">Mrs. Smitha S Nair</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Groom's Family -->
+      <div class="family-card reveal">
+        <div class="family-card-header groom-header">
+          <div class="family-icon">🤵</div>
+          <h3>Groom's Parents</h3>
+          <p class="family-name-title">Akhil P J</p>
+        </div>
+        <div class="family-members">
+          <div class="member">
+            <span class="member-role">Father</span>
+            <span class="member-name">Mr. Pradeep Kumar R</span>
+          </div>
+          <div class="member">
+            <span class="member-role">Mother</span>
+            <span class="member-name">Mrs. Jayasree O</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section id="gallery" class="section section-alt">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">Moments to cherish forever</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-placeholder reveal">
+        <div class="placeholder-icon">📸</div>
+        <p>Pre-Wedding Album</p>
+        <span>Photoshoot coming soon</span>
+      </div>
+      <div class="gallery-placeholder reveal">
+        <div class="placeholder-icon">🎥</div>
+        <p>Wedding Highlights</p>
+        <span>Reel coming soon</span>
+      </div>
+      <div class="gallery-placeholder reveal">
+        <div class="placeholder-icon">🌸</div>
+        <p>Haldi &amp; Mehendi Album</p>
+        <span>Ceremony clips</span>
+      </div>
+      <div class="gallery-placeholder reveal">
+        <div class="placeholder-icon">💃</div>
+        <p>Reception Night</p>
+        <span>Memories coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RSVP SECTION ===== -->
+  <section id="rsvp" class="section section-alt">
+    <div class="section-header">
+      <div class="lotus-divider">✉️</div>
+      <h2 class="section-title">RSVP</h2>
+      <p class="section-sub">Kindly respond by October 15, 2026</p>
+    </div>
+
+    <div class="wishes-container reveal">
+      <div class="love-story-card" style="text-align: left; padding: 45px 36px; max-width: 760px;">
+        <form class="wishes-form" id="rsvpForm" style="box-shadow:none; padding:0; backdrop-filter:none; background:none;">
+          <div class="form-group-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 24px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-name">Your Full Name</label>
+              <input type="text" id="rsvp-name" placeholder="Enter your name" required style="background:var(--ivory-dark);" />
+            </div>
+            
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-phone">Contact Number</label>
+              <input type="text" id="rsvp-phone" placeholder="Enter phone number" style="background:var(--ivory-dark);" />
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-attendees">Number of Attendees</label>
+              <select id="rsvp-attendees" style="width:100%; padding:14px 18px; border:1.5px solid var(--glass-border); border-radius:12px; background:var(--ivory-dark); color:var(--charcoal); outline:none;">
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5+ People</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-events">Which Events are you attending?</label>
+              <select id="rsvp-events" style="width:100%; padding:14px 18px; border:1.5px solid var(--glass-border); border-radius:12px; background:var(--ivory-dark); color:var(--charcoal); outline:none;">
+                <option value="Both">Both (Oct 24 &amp; 25)</option>
+                <option value="Reception">Reception (Oct 24)</option>
+                <option value="Wedding">Wedding / Feast (Oct 25)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom:0; grid-column: 1 / -1;">
+              <label for="rsvp-food">Food Preference</label>
+              <select id="rsvp-food" style="width:100%; padding:14px 18px; border:1.5px solid var(--glass-border); border-radius:12px; background:var(--ivory-dark); color:var(--charcoal); outline:none;">
+                <option value="Veg">Vegetarian Feast 🌿</option>
+                <option value="Non-Veg">Non-Vegetarian Feast 🍗</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitRSVPBtn" style="background: var(--gold); color: var(--royal-blue); border-color: var(--royal-blue); margin-top: 10px;">
+            ✉️ Submit RSVP ✉️
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE SACRED GUEST BOOK (Dynamic Cloudflare API) ===== -->
+  <section id="wishes" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">The Sacred Guest Book</h2>
+      <p class="section-sub">Share your love, prayers, &amp; blessings with us</p>
+    </div>
+    
+    <div class="wishes-container">
+      <div class="guestbook-invite reveal">
+        <p class="guestbook-invite-text">
+          We would be deeply honored to receive your prayers, blessings, and warm wishes as we step into this sacred covenant.
+        </p>
+        <button class="open-guestbook-btn" id="openGuestBook">
+          🪷 Sign the Guest Book 🪷
+        </button>
+      </div>
+
+      <!-- Live blessings display container -->
+      <div class="wishes-display" id="wishesDisplay">
+        <!-- Dynamic database blessings load here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE GUEST BOOK POPUP MODAL ===== -->
+  <div class="guestbook-modal" id="guestBookModal">
+    <div class="guestbook-modal-content">
+      <button class="guestbook-close" id="closeGuestBook" aria-label="Close Modal">✕</button>
+      <div class="guestbook-header">
+        <span class="guestbook-mandala">🪷</span>
+        <h2>Sign the Guest Book</h2>
+        <p>Your blessings will be displayed live on our website</p>
+      </div>
+      <form class="wishes-form" id="wishesForm">
+        <div class="form-group">
+          <label for="wisher-name">Your Name</label>
+          <input type="text" id="wisher-name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="wisher-relation">Relation to Couple</label>
+          <input type="text" id="wisher-relation" placeholder="e.g. Friend, Uncle, Cousin" />
+        </div>
+        <div class="form-group">
+          <label for="wisher-message">Your Blessing / Message</label>
+          <textarea id="wisher-message" rows="4" placeholder="Write your heartfelt message..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitWish">
+          🪷 Leave Blessings 🪷
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- ===== DIRECTIONS / VENUE GEOMETRIC MAP ===== -->
+  <section id="directions" class="section section-alt">
+    <div class="section-header">
+      <div class="lotus-divider">🪷</div>
+      <h2 class="section-title">Find the Venue</h2>
+      <p class="section-sub">RDR Convention Centre, Edappazhinji, Thiruvananthapuram</p>
+    </div>
+    
+    <div class="qr-wrapper reveal">
+      <div class="qr-card geometric-map-frame" id="qrCardTilt">
+        <div class="qr-venue-photo">
+          <img src="images/venue.jpg" alt="RDR Convention Centre" />
+          <div class="qr-venue-overlay">
+            <h3>RDR Convention Centre</h3>
+            <p>Edappazhinji, Thiruvananthapuram</p>
+          </div>
+        </div>
+        <div class="qr-code-block">
+          <p class="qr-label">📍 Scan to Navigate</p>
+          <div class="qr-frame">
+            <div class="qr-corner qr-tl"></div>
+            <div class="qr-corner qr-tr"></div>
+            <div class="qr-corner qr-bl"></div>
+            <div class="qr-corner qr-br"></div>
+            <a href="https://maps.app.goo.gl/YhMqnr7tsKcxkpPFA" target="_blank">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.app.goo.gl/YhMqnr7tsKcxkpPFA&color=0B1B3D&bgcolor=FFFDF9&margin=10"
+                alt="QR Code - RDR Convention Centre Directions"
+                class="qr-img"
+              />
+            </a>
+          </div>
+          <p class="qr-sub">Or click the QR code to open in Google Maps</p>
+          <a href="https://maps.app.goo.gl/YhMqnr7tsKcxkpPFA" target="_blank" class="directions-btn">
+            🗺️ Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (Watermark Shloka) ===== -->
+  <footer id="footer">
+    <div class="footer-shloka-watermark">
+      यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवताः
+    </div>
+
+    <div class="footer-mandala">🪷</div>
+    <div class="footer-names">
+      <span class="footer-name">Dr. Varsha S</span>
+      <span class="footer-amp">💕</span>
+      <span class="footer-name">Akhil P J</span>
+    </div>
+    <p class="footer-date">October 25, 2026 | Thiruvananthapuram, Kerala</p>
+    
+    <div class="footer-divider">• • •</div>
+    <p class="footer-credit">Made with 🪷 &amp; 💕 for a lifetime of togetherness</p>
+    <div class="footer-dev-divider"></div>
+    <p class="footer-dev">
+      Designed &amp; Developed with 🪷 by <strong>Varun Satheesh</strong>
+      &nbsp;|&nbsp;
+      <a href="/cdn-cgi/l/email-protection#a7c6cee7d1c6d5d2c9d4c6d3cfc2c2d4cf89cec9" class="footer-email"><span class="__cf_email__" data-cfemail="8dece4cdfbecfff8e3feecf9e5e8e8fee5a3e4e3">[email&#160;protected]</span></a>
+    </p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js?v=20"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"ead4f3d72f8f4de58c304a8a8d3061a5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

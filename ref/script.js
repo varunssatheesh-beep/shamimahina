@@ -40,7 +40,7 @@
 
 // ===== COUNTDOWN TIMER =====
 function updateCountdown() {
-  const wedding = new Date('2026-09-06T11:30:00+05:30').getTime();
+  const wedding = new Date('2026-10-25T10:30:00+05:30').getTime();
   const now = new Date().getTime();
   const diff = wedding - now;
 
@@ -314,7 +314,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       } else {
         display.innerHTML = `
           <div class="wish-card" style="text-align:center;">
-            <p class="wish-msg">Be the first to leave a blessing! ☪️</p>
+            <p class="wish-msg">Be the first to leave a blessing! 🪷</p>
           </div>
         `;
       }
@@ -322,9 +322,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       console.error("Failed to load blessings:", err);
       display.innerHTML = `
         <div class="wish-card">
-          <div class="wish-name">🌙 Mr. Shahabudheen A. &amp; Mrs. Vaseela</div>
-          <div class="wish-relation">Parents of the Groom</div>
-          <div class="wish-msg">"Wishing our dearest children Ahina and Shamim a beautiful journey ahead. May God shower you with endless happiness. ☪️"</div>
+          <div class="wish-name">🌸 Adv. Satheesh Kumar S &amp; Mrs. Smitha S Nair</div>
+          <div class="wish-relation">Parents of the Bride</div>
+          <div class="wish-msg">"Wishing our dearest children Varsha and Akhil a beautiful journey ahead. May God shower you with endless happiness. 🪷"</div>
         </div>
       `;
     }
@@ -334,7 +334,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const card = document.createElement('div');
     card.className = 'wish-card';
     card.innerHTML = `
-      <div class="wish-name">🌙 ${escapeHtml(name)}</div>
+      <div class="wish-name">🌸 ${escapeHtml(name)}</div>
       <div class="wish-relation">${relation ? escapeHtml(relation) : 'Well Wisher'}</div>
       <div class="wish-msg">"${escapeHtml(message)}"</div>
     `;
@@ -389,13 +389,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         form.reset();
         modal.classList.remove('open');
       } finally {
-        if (submitBtn) submitBtn.textContent = '☪️ Leave Blessings ☪️';
+        if (submitBtn) submitBtn.textContent = '🪷 Leave Blessings 🪷';
       }
     });
   }
 
   function triggerLotusBurst() {
-    const petals = ['☪️', '🌙', '✨', '💕', '☪️'];
+    const petals = ['🪷', '🌸', '✨', '💕', '🪷'];
     const burstCount = 35;
     
     for (let i = 0; i < burstCount; i++) {
@@ -460,7 +460,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       const resData = await response.json();
 
       if (response.ok && resData.success) {
-        alert(`Thank you, ${nameVal}! Your RSVP has been received. ☪️`);
+        alert(`Thank you, ${nameVal}! Your RSVP has been received. 🪷`);
         triggerBurst();
         form.reset();
       } else {
@@ -468,7 +468,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     } catch (err) {
       console.error("RSVP API error:", err);
-      alert(`Thank you, ${nameVal}! Your RSVP has been logged successfully (Offline fallback). ☪️`);
+      alert(`Thank you, ${nameVal}! Your RSVP has been logged successfully (Offline fallback). 🪷`);
       triggerBurst();
       form.reset();
     } finally {
@@ -477,7 +477,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 
   function triggerBurst() {
-    const petals = ['☪️', '🌙', '✨', '💕', '☪️'];
+    const petals = ['🪷', '🌸', '✨', '💕', '🪷'];
     for (let i = 0; i < 30; i++) {
       const p = document.createElement('div');
       p.className = 'lotus-petal-particle';
@@ -494,4 +494,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   }
 })();
 
-console.log('☪️ Shamim & Ahina Wedding Site Loaded successfully ☪️');
+console.log('🪷 Dr. Varsha & Akhil Wedding Site Loaded successfully 🪷');

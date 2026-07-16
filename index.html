@@ -3,480 +3,452 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahammed Shamim & Ahina M | Nikah 2026</title>
-  <meta name="description" content="Join us to celebrate the blessed Nikah of Ahammed Shamim and Ahina M. A union blessed by Allah, surrounded by family and love." />
+  <title>Shamim & Ahina | Nikah Invitation</title>
+  <meta name="description" content="Celebrate the wedding of Ahammed Shamim and Ahina M on September 06, 2026." />
+  <link rel="icon" type="image/jpeg" href="images/BRIDE.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,700;1,700&family=Lato:wght@300;400;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=21" />
 </head>
 <body>
 
+  <!-- Custom luxury golden dot cursor -->
+  <div class="custom-cursor" id="customCursor"></div>
+
+  <!-- Ambient Soundscape -->
+  <audio id="ambientAudio" loop preload="auto">
+    <!-- Placeholder for background audio -->
+  </audio>
+
+  <!-- Floating music play button -->
+  <button id="musicStartBtn" aria-label="Play wedding music" style="display:flex; position:fixed; bottom:28px; right:28px; z-index:99998; align-items:center; gap:10px; background:linear-gradient(135deg,#D4AF37,#f0d080); color:#0A4A2F; border:none; border-radius:50px; padding:13px 22px; font-family:'Poppins',sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:1px; box-shadow:0 8px 30px rgba(201,169,97,0.45); cursor:pointer; animation: musicPulse 2s ease-in-out infinite;">
+    🎵 Play Music
+  </button>
+
   <!-- ===== NAVIGATION ===== -->
   <nav id="navbar">
-    <div class="nav-logo">☪️ Shamim & Ahina</div>
+    <div class="nav-logo">☪️ S &amp; A</div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">☰</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#hero">Home</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#family">Family</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#wishes">Duas</a></li>
+      <li><a href="#couple">Couple</a></li>
+      <li><a href="#events">Ceremonies</a></li>
+      <li><a href="#love-journey">Our Story</a></li>
+      <li><a href="#wishes">Guest Book</a></li>
     </ul>
   </nav>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO SECTION (Immersive Viewport) ===== -->
   <section id="hero">
-    <div class="geometric-bg"></div>
+    <!-- video background -->
+    <div class="hero-video-container">
+      <iframe src="https://www.youtube.com/embed/TeO374JpPWk?autoplay=1&mute=1&controls=0&loop=1&playlist=TeO374JpPWk&playsinline=1&enablejsapi=1&showinfo=0&rel=0&iv_load_policy=3" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen 
+              class="hero-video-bg youtube-bg">
+      </iframe>
+      <div class="hero-video-overlay" style="background: linear-gradient(to bottom, rgba(10, 74, 47, 0.15) 0%, rgba(10, 74, 47, 0.35) 100%);"></div>
+    </div>
+    
     <div class="particles" id="particles"></div>
 
     <div class="hero-content">
-      <p class="arabic-blessing">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-      <p class="hero-subtitle-top">In the name of Allah, the Most Gracious, the Most Merciful</p>
+      <div class="hero-ganesha">
+        <div style="font-size: 3rem; color: #D4AF37; margin-bottom:10px; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));">🌙</div>
+      </div>
 
-      <div class="names-wrapper">
-        <div class="portrait-block bride-portrait-block">
-          <div class="portrait-frame bride-frame">
-            <img src="images/BRIDE.jpg" alt="Ahina M - Bride" class="portrait-img" />
-            <div class="portrait-glow bride-glow"></div>
-            <div class="portrait-shimmer"></div>
-          </div>
-          <span class="name-label">Bride</span>
-          <h1 class="hero-name">Ahina M</h1>
-          <p class="name-parents">D/o Mr. Shamsudeen &amp; Mrs. Majitha</p>
-        </div>
+      <p class="sanskrit-blessing" style="font-family:'Amiri', serif; font-size: 1.5rem; letter-spacing: 2px;">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="sanskrit-blessing" style="font-size: 0.8rem; letter-spacing: 2px; margin-top:-15px;">Invoking the Blessings of Allah</p>
 
-        <div class="hero-center-block">
-          <div class="wedding-symbol">
-            <div class="symbol-ring">
-              <svg viewBox="0 0 120 120" class="crescent-svg">
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4"/>
-                <circle cx="60" cy="60" r="40" fill="none" stroke="#C9A84C" stroke-width="0.5"/>
-                <text x="60" y="55" text-anchor="middle" fill="#C9A84C" font-size="26">☪️</text>
-                <text x="60" y="80" text-anchor="middle" fill="#C9A84C" font-size="12" font-family="serif">&amp;</text>
-              </svg>
-            </div>
+      <div class="countdown-wrapper temple-hero-countdown">
+        <div class="countdown" id="countdown">
+          <div class="count-block-text">
+            <span id="cd-days">00</span>
+            <label>DAYS</label>
           </div>
-          <div class="wedding-date-badge">
-            <span class="date-label">Blessed Nikah Day</span>
-            <span class="date-main">06 September 2026</span>
-            <span class="date-day">Sunday • Rabi' al-Awwal 25</span>
+          <div class="count-sep-text">:</div>
+          <div class="count-block-text">
+            <span id="cd-hours">00</span>
+            <label>HOURS</label>
           </div>
-          <!-- Countdown Timer -->
-          <div class="countdown-wrapper">
-            <p class="countdown-label">✨ Counting Down to the Sacred Nikah ✨</p>
-            <div class="countdown" id="countdown">
-              <div class="count-block"><span id="cd-days">00</span><label>Days</label></div>
-              <div class="count-sep">:</div>
-              <div class="count-block"><span id="cd-hours">00</span><label>Hours</label></div>
-              <div class="count-sep">:</div>
-              <div class="count-block"><span id="cd-mins">00</span><label>Minutes</label></div>
-              <div class="count-sep">:</div>
-              <div class="count-block"><span id="cd-secs">00</span><label>Seconds</label></div>
-            </div>
+          <div class="count-sep-text">:</div>
+          <div class="count-block-text">
+            <span id="cd-mins">00</span>
+            <label>MINUTES</label>
           </div>
-        </div>
-
-        <div class="portrait-block groom-portrait-block">
-          <div class="portrait-frame groom-frame">
-            <img src="images/GROOM.jpg" alt="Ahammed Shamim - Groom" class="portrait-img" />
-            <div class="portrait-glow groom-glow"></div>
-            <div class="portrait-shimmer"></div>
+          <div class="count-sep-text">:</div>
+          <div class="count-block-text">
+            <span id="cd-secs">00</span>
+            <label>SECONDS</label>
           </div>
-          <span class="name-label">Groom</span>
-          <h1 class="hero-name">Ahammed Shamim</h1>
-          <p class="name-parents">S/o Mr. Shahabudheen A. &amp; Mrs. Vaseela</p>
         </div>
       </div>
-    </div>
 
-    <!-- ===== HERO VENUE WIDE BANNER ===== -->
-    <div class="venue-banner-section">
-      <div class="venue-banner-img">
-        <img src="images/venue.jpg" alt="Wedding Venue" />
-        <div class="venue-banner-overlay">
-          <div class="venue-banner-content">
-            <p class="venue-banner-tag">💍 Grand Nikah Venue</p>
-            <h2 class="venue-banner-title">Archana Auditorium</h2>
-            <p class="venue-banner-sub">Kalluvettankuzhi, Vizhinjam, Thiruvananthapuram</p>
-            <div class="venue-banner-pills">
-              <span>📅 06 September 2026</span>
-              <span>⏰ 11:30 a.m. – 12:30 p.m.</span>
-            </div>
-            <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank" class="venue-banner-btn">🗺️ Get Directions</a>
-          </div>
-        </div>
+      <div class="temple-hero-names">
+        <h1 class="bride-name-hero">Ahina M</h1>
+        <div class="temple-hero-and">&amp;</div>
+        <h1 class="groom-name-hero">Ahammed Shamim</h1>
+      </div>
+
+      <div class="temple-hero-venue">
+        <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank" class="venue-link-overlay" style="background: rgba(10, 74, 47, 0.85);">
+          <span class="venue-icon">📍</span>
+          <span class="venue-text">Archana Auditorium, Vizhinjam</span>
+          <span class="venue-arrow">➔</span>
+        </a>
       </div>
     </div>
 
     <div class="scroll-down" id="scrollDown">
       <div class="scroll-arrow">▼</div>
-      <span>Scroll to Explore</span>
+      <span>Scroll to Canvas</span>
     </div>
   </section>
 
-  <!-- ===== LANTERN ANIMATION SECTION ===== -->
-  <section id="lantern-section">
-    <div class="lantern-text">
-      <div class="lantern-icon">🌙</div>
-      <h2>Noor of Love</h2>
-      <p>May Allah fill your union with His divine light, boundless mercy &amp; eternal love</p>
+  <!-- ===== DUAL OVERLAPPING INFINITE SCROLLING MARQUEES ===== -->
+  <div class="dual-marquees-container">
+    <div class="marquee-ribbon ribbon-top" style="background: #0A4A2F;">
+      <div class="marquee-track-l2r" id="marqueeTop">
+        <span>MUBARAK HO ✦ AHINA &amp; SHAMIM ✦ SEPTEMBER 06, 2026 ✦ MUBARAK HO ✦ AHINA &amp; SHAMIM ✦ SEPTEMBER 06, 2026 ✦ MUBARAK HO ✦ AHINA &amp; SHAMIM ✦ SEPTEMBER 06, 2026 ✦</span>
+      </div>
     </div>
-    <div class="lanterns-stage">
-      <div class="lantern l1">
-        <div class="lantern-body"><div class="lantern-glow"></div></div>
-        <div class="lantern-string"></div>
-        <div class="lantern-flame"></div>
+    <div class="marquee-ribbon ribbon-bottom">
+      <div class="marquee-track-r2l" id="marqueeBottom">
+        <span>ARCHANA AUDITORIUM ✦ VIZHINJAM ✦ BLESSINGS &amp; DUAS ✦ ARCHANA AUDITORIUM ✦ VIZHINJAM ✦ BLESSINGS &amp; DUAS ✦ ARCHANA AUDITORIUM ✦ VIZHINJAM ✦ BLESSINGS &amp; DUAS ✦</span>
       </div>
-      <div class="lantern l2">
-        <div class="lantern-body"><div class="lantern-glow"></div></div>
-        <div class="lantern-string"></div>
-        <div class="lantern-flame"></div>
-      </div>
-      <div class="lantern l3">
-        <div class="lantern-body"><div class="lantern-glow"></div></div>
-        <div class="lantern-string"></div>
-        <div class="lantern-flame"></div>
-      </div>
-      <div class="lantern l4">
-        <div class="lantern-body"><div class="lantern-glow"></div></div>
-        <div class="lantern-string"></div>
-        <div class="lantern-flame"></div>
-      </div>
-      <div class="lantern l5">
-        <div class="lantern-body"><div class="lantern-glow"></div></div>
-        <div class="lantern-string"></div>
-        <div class="lantern-flame"></div>
-      </div>
-      <div class="stars-field" id="starsField"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== ENGAGEMENT VIDEO ===== -->
-  <section id="engagement-video" class="section">
+  <!-- ===== COUPLE SECTION (Circular Frames, Parent Details) ===== -->
+  <section id="couple" class="section">
     <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Our Story</h2>
-      <p class="section-sub">A beautiful beginning — captured forever</p>
+      <div class="lotus-divider">☪️</div>
+      <h2 class="section-title">The Couple</h2>
+      <p class="section-sub">Destined by Allah, Bound by Love</p>
     </div>
-    <div class="video-wrapper reveal">
-      <div class="video-frame">
-        <div class="video-corner tl"></div>
-        <div class="video-corner tr"></div>
-        <div class="video-corner bl"></div>
-        <div class="video-corner br"></div>
-        <video id="engagementVideo" controls playsinline>
-          <source src="videos/engagement.mp4" type="video/mp4">
-        </video>
-        <div class="video-no-file" id="videoPlaceholder">
-          <div class="no-video-icon">🎬</div>
-          <h3>Our Story Video</h3>
-          <p>Place your video at <code>videos/engagement.mp4</code></p>
-          <p class="upload-hint">Your magical moments will shine right here 💕</p>
+    
+    <div class="temple-couple-container">
+      <!-- Bride Spread -->
+      <div class="temple-couple-spread bride-spread reveal">
+        <div class="temple-couple-photo-frame bride-frame circular-frame">
+          <img src="images/BRIDE.jpg" alt="Ahina M - Bride" class="temple-couple-img" />
+          <div class="temple-gold-border"></div>
+        </div>
+        <div class="temple-couple-info">
+          <span class="temple-badge" style="border-color: #0A4A2F; color: #0A4A2F;">The Bride</span>
+          <h2 class="couple-title-name" style="color: #0A4A2F;">Ahina M</h2>
+          <p class="couple-lineage">D/o Mr. Shamsudeen &amp; Mrs. Majitha</p>
+          <p style="font-family:'Poppins', sans-serif; font-size:0.75rem; color:#666; max-width:280px; margin-bottom:12px;">TC 107/19, Pananinnavila, Harbour Road, Vizhinjam P.O.</p>
+          <div class="line-divider"></div>
+          <p class="couple-description">
+            Radiant and graceful, Ahina brings warmth and light into every life she touches. She stands ready to cross the threshold into a beautiful union rooted in faith.
+          </p>
+        </div>
+      </div>
+
+      <!-- Groom Spread -->
+      <div class="temple-couple-spread groom-spread reveal">
+        <div class="temple-couple-photo-frame groom-frame circular-frame">
+          <img src="images/GROOM.jpg" alt="Ahammed Shamim - Groom" class="temple-couple-img" />
+          <div class="temple-gold-border"></div>
+        </div>
+        <div class="temple-couple-info">
+          <span class="temple-badge" style="border-color: #0A4A2F; color: #0A4A2F;">The Groom</span>
+          <h2 class="couple-title-name" style="color: #0A4A2F;">Ahammed Shamim</h2>
+          <p class="couple-lineage">S/o Mr. Shahabudheen A. &amp; Mrs. Vaseela</p>
+          <p style="font-family:'Poppins', sans-serif; font-size:0.75rem; color:#666; max-width:280px; margin-bottom:12px;">C 48, Sree Chitra Nagar, Pangode, Thirumala P.O.</p>
+          <div class="line-divider"></div>
+          <p class="couple-description">
+            With a sharp mind and a caring heart, Shamim is prepared to embark on this lifetime journey of partnership and mutual growth with his beautiful bride.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== MARQUEE BANNER ===== -->
-  <div class="marquee-banner">
-    <div class="marquee-track">
-      <span>🌙 Mubarak Ho 🌙</span>
-      <span>☪️ Ahammed Shamim &amp; Ahina M ☪️</span>
-      <span>💍 06 September 2026 💍</span>
-      <span>🌹 With Love &amp; Duas 🌹</span>
-      <span>✨ Blessed by Allah ✨</span>
-      <span>🌙 Mubarak Ho 🌙</span>
-      <span>☪️ Ahammed Shamim &amp; Ahina M ☪️</span>
-      <span>💍 06 September 2026 💍</span>
-      <span>🌹 With Love &amp; Duas 🌹</span>
-      <span>✨ Blessed by Allah ✨</span>
-    </div>
-  </div>
-
-  <!-- ===== ENGAGEMENT GALLERY SLIDER ===== -->
-  <section id="engagement-gallery" class="section section-alt">
+  <!-- ===== HORIZONTAL SCROLL CAROUSEL EVENTS ===== -->
+  <section id="events" class="section section-alt">
     <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Glimpses Together</h2>
-      <p class="section-sub">Cherished moments — a day we will treasure forever</p>
+      <div class="lotus-divider">☪️</div>
+      <h2 class="section-title">The Ceremonies</h2>
+      <p class="section-sub">Join us for every blessed moment</p>
     </div>
 
-    <div class="eng-slider-wrapper reveal">
+    <div class="carousel-outer-container">
+      <button class="carousel-control prev-slide" id="carouselPrev" aria-label="Previous Slide">‹</button>
+      
+      <div class="events-carousel-wrapper">
+        <div class="events-carousel-track" id="eventsCarousel">
+          
+          <!-- 1. Nikah -->
+          <div class="carousel-card main-event highlight-event reveal">
+            <div class="card-venue-img"><img src="images/venue.jpg" alt="Archana Auditorium" /></div>
+            <div class="card-header-block">
+              <span class="card-badge">Grand Nikah</span>
+              <div class="event-massive-date highlighted-date-gold">SEP 06</div>
+              <h3 class="event-name">Nikah Ceremony</h3>
+            </div>
+            <div class="card-body-block">
+              <p class="event-time">⏰ 11:30 AM – 12:30 PM</p>
+              <p class="event-venue">📍 Archana Auditorium</p>
+              <p class="event-location">Kalluvettankuzhi, Vizhinjam</p>
+              <p class="mapped-distance">🚗 Sunday • Rabi' al-Awwal 25</p>
+            </div>
+            <div class="card-actions-block">
+              <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank" class="event-map-btn gold-btn">🗺️ Navigate Location</a>
+            </div>
+          </div>
+
+          <!-- 2. Reception -->
+          <div class="carousel-card main-event reveal">
+            <div class="card-venue-img"><img src="images/venue.jpg" alt="Balakrishna Kalyana Mandapam" /></div>
+            <div class="card-header-block">
+              <span class="card-badge">Grand Celebration</span>
+              <div class="event-massive-date highlighted-date-gold" style="color:#0A4A2F;">SEP 06</div>
+              <h3 class="event-name">Wedding Reception</h3>
+            </div>
+            <div class="card-body-block">
+              <p class="event-time">⏰ 5:00 PM – 9:00 PM</p>
+              <p class="event-venue">📍 Balakrishna Kalyana Mandapam</p>
+              <p class="event-location">Thirumala</p>
+              <p class="mapped-distance">🚗 Evening Feast & Celebration</p>
+            </div>
+            <div class="card-actions-block">
+              <a href="https://maps.app.goo.gl/search/Balakrishna+Kalyana+Mandapam+Thirumala" target="_blank" class="event-map-btn" style="color:#0A4A2F; border-color:#D4AF37;">🗺️ Navigate Location</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="carousel-control next-slide" id="carouselNext" aria-label="Next Slide">›</button>
+    </div>
+  </section>
+
+  <!-- ===== LOVE STORY TIMELINE SECTION ===== -->
+  <section id="love-journey" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">☪️</div>
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-sub">Milestones Written by Allah</p>
+    </div>
+
+    <div class="journey-timeline-container">
+      <div class="journey-timeline-line">
+        <div class="journey-progress" id="journeyProgress"></div>
+      </div>
+
+      <!-- Marriage -->
+      <div class="journey-item left reveal">
+        <div class="journey-marker">💍</div>
+        <div class="journey-card journey-highlight-card">
+          <span class="journey-date">September 06, 2026</span>
+          <h3 class="journey-title">The Nikah</h3>
+          <p class="journey-location">📍 Archana Auditorium</p>
+          <p class="journey-desc">Shamim and Ahina tie the knot in a grand ceremony, stepping into a lifetime of shared dreams and divine blessings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENGAGEMENT VIDEO (Fluid Warp Mask) ===== -->
+  <section id="engagement-video" class="section section-alt">
+    <div class="section-header">
+      <div class="lotus-divider">☪️</div>
+      <h2 class="section-title">Our Story Frame</h2>
+      <p class="section-sub">A beautiful beginning — captured forever</p>
+    </div>
+    <div class="video-wrapper reveal">
+      <div class="video-frame warp-mask" style="background:#0A4A2F;">
+        <video id="engagementVideo" controls playsinline>
+          <source src="videos/engagement.mp4" type="video/mp4">
+        </video>
+        <div class="video-no-file" id="videoPlaceholder" style="background: linear-gradient(135deg, #0A4A2F, #052617);">
+          <div class="no-video-icon">🎬</div>
+          <h3 style="color:#fff; font-family:'Playfair Display', serif;">Our Story Video</h3>
+          <p style="color:#D4AF37;">Place your video at <code>videos/engagement.mp4</code></p>
+          <p class="upload-hint" style="color:rgba(255,255,255,0.7);">Your magical moments will shine right here 💕</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== ENGAGEMENT GALLERY (Immersive Coffee-Table Book Slider) ===== -->
+  <section id="engagement-gallery" class="section">
+    <div class="section-header">
+      <div class="lotus-divider">☪️</div>
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">Moments to cherish forever</p>
+    </div>
+
+    <div class="eng-slider-wrapper reveal" style="background:#0A4A2F; border-color:#D4AF37;">
       <div class="eng-slider" id="engSlider">
         <div class="eng-slide">
           <div class="eng-slide-bg" style="background-image:url('images/engagement/eng1.jpg')"></div>
           <img src="images/engagement/eng1.jpg" alt="Moment 1" loading="lazy" />
-          <div class="eng-slide-caption">Ahina — Radiant in Grace 🌹</div>
+          <div class="eng-slide-caption">Radiant Beginnings ✨</div>
         </div>
         <div class="eng-slide">
           <div class="eng-slide-bg" style="background-image:url('images/engagement/eng2.jpg')"></div>
           <img src="images/engagement/eng2.jpg" alt="Moment 2" loading="lazy" />
-          <div class="eng-slide-caption">Together, Always 💞</div>
+          <div class="eng-slide-caption">Together Always 💞</div>
         </div>
         <div class="eng-slide">
           <div class="eng-slide-bg" style="background-image:url('images/engagement/eng3.jpg')"></div>
           <img src="images/engagement/eng3.jpg" alt="Moment 3" loading="lazy" />
-          <div class="eng-slide-caption">A Bond Written in the Stars ✨</div>
+          <div class="eng-slide-caption">Blessed by Family ☪️</div>
         </div>
         <div class="eng-slide">
           <div class="eng-slide-bg" style="background-image:url('images/engagement/eng4.jpg')"></div>
           <img src="images/engagement/eng4.jpg" alt="Moment 4" loading="lazy" />
-          <div class="eng-slide-caption">Blessed by Family, Bound by Love 🌙</div>
-        </div>
-        <div class="eng-slide">
-          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng5.jpg')"></div>
-          <img src="images/engagement/eng5.jpg" alt="Moment 5" loading="lazy" />
-          <div class="eng-slide-caption">Cherished Moments ☪️</div>
-        </div>
-        <div class="eng-slide">
-          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng6.jpg')"></div>
-          <img src="images/engagement/eng6.jpg" alt="Moment 6" loading="lazy" />
-          <div class="eng-slide-caption">Divine Beginnings 🌹</div>
-        </div>
-        <div class="eng-slide">
-          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng7.jpg')"></div>
-          <img src="images/engagement/eng7.jpg" alt="Moment 7" loading="lazy" />
-          <div class="eng-slide-caption">Love &amp; Laughter ❤️</div>
-        </div>
-        <div class="eng-slide">
-          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng8.jpg')"></div>
-          <img src="images/engagement/eng8.jpg" alt="Moment 8" loading="lazy" />
-          <div class="eng-slide-caption">Perfect Together 👩‍❤️‍👨</div>
-        </div>
-        <div class="eng-slide">
-          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng9.jpg')"></div>
-          <img src="images/engagement/eng9.jpg" alt="Moment 9" loading="lazy" />
-          <div class="eng-slide-caption">A Beautiful Journey Begins 🌅</div>
-        </div>
-        <div class="eng-slide">
-          <div class="eng-slide-bg" style="background-image:url('images/engagement/eng10.jpg')"></div>
-          <img src="images/engagement/eng10.jpg" alt="Moment 10" loading="lazy" />
-          <div class="eng-slide-caption">Stepping into Forever 👣</div>
+          <div class="eng-slide-caption">Endless Love 💖</div>
         </div>
       </div>
 
-      <button class="eng-arrow eng-prev" id="engPrev" aria-label="Previous">&#10094;</button>
-      <button class="eng-arrow eng-next" id="engNext" aria-label="Next">&#10095;</button>
+      <!-- Navigation Arrows -->
+      <button class="eng-arrow eng-prev" id="engPrev" aria-label="Previous" style="color:#0A4A2F;">&#10094;</button>
+      <button class="eng-arrow eng-next" id="engNext" aria-label="Next" style="color:#0A4A2F;">&#10095;</button>
 
+      <!-- Dot / Progress Indicators -->
       <div class="eng-dots" id="engDots">
         <span class="eng-dot active" data-idx="0"></span>
         <span class="eng-dot" data-idx="1"></span>
         <span class="eng-dot" data-idx="2"></span>
         <span class="eng-dot" data-idx="3"></span>
-        <span class="eng-dot" data-idx="4"></span>
-        <span class="eng-dot" data-idx="5"></span>
-        <span class="eng-dot" data-idx="6"></span>
-        <span class="eng-dot" data-idx="7"></span>
-        <span class="eng-dot" data-idx="8"></span>
-        <span class="eng-dot" data-idx="9"></span>
       </div>
 
-      <div class="eng-date-badge">☪️ Blessed Moments</div>
-      <div class="eng-counter" id="engCounter">1 / 10</div>
+      <!-- Date Badge & Counter -->
+      <div class="eng-date-badge" style="background:rgba(10, 74, 47, 0.9);">💍 Cherished Moments</div>
+      <div class="eng-counter" id="engCounter">1 / 4</div>
     </div>
   </section>
 
-  <!-- ===== LOVE STORY ===== -->
-  <section id="love-story" class="section">
+
+  <!-- ===== RSVP SECTION ===== -->
+  <section id="rsvp" class="section section-alt">
     <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Our Story</h2>
-      <p class="section-sub">A divine beginning</p>
+      <div class="lotus-divider">✉️</div>
+      <h2 class="section-title">RSVP</h2>
+      <p class="section-sub">Kindly respond for the events</p>
     </div>
-    <div class="love-story-card">
-      <div class="love-story-icon">💞</div>
-      <p class="love-story-text">
-        Two souls, brought together by the will of Allah — for in Islam, every true love story is written long before it begins.
-        What blossomed between <em>Shamim</em> and <em>Ahina</em> was more than a meeting of hearts —
-        it was a divine arrangement, nurtured by faith, trust, and the beautiful traditions of their families.
-        United by destiny, blessed by their loved ones, and sealed with the sacred bond of
-        <strong>Nikah</strong>, they now embark on a journey of love, laughter, and lifelong devotion —
-        together, in this world and the next, by Allah's grace.
-      </p>
-      <div class="story-flowers">🌹 ☪️ 🌹</div>
+
+    <div class="wishes-container reveal">
+      <div class="love-story-card" style="text-align: left; padding: 45px 36px; max-width: 760px;">
+        <form class="wishes-form" id="rsvpForm" style="box-shadow:none; padding:0; backdrop-filter:none; background:none;">
+          <div class="form-group-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 24px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-name">Your Full Name</label>
+              <input type="text" id="rsvp-name" placeholder="Enter your name" required style="background:var(--ivory-dark);" />
+            </div>
+            
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-phone">Contact Number</label>
+              <input type="text" id="rsvp-phone" placeholder="Enter phone number" style="background:var(--ivory-dark);" />
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-attendees">Number of Attendees</label>
+              <select id="rsvp-attendees" style="width:100%; padding:14px 18px; border:1.5px solid var(--glass-border); border-radius:12px; background:var(--ivory-dark); color:var(--charcoal); outline:none;">
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5+ People</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label for="rsvp-events">Which Events are you attending?</label>
+              <select id="rsvp-events" style="width:100%; padding:14px 18px; border:1.5px solid var(--glass-border); border-radius:12px; background:var(--ivory-dark); color:var(--charcoal); outline:none;">
+                <option value="Both">Both (Nikah &amp; Reception)</option>
+                <option value="Nikah">Nikah Ceremony (11:30 AM)</option>
+                <option value="Reception">Reception (5:00 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitRSVPBtn" style="background: #D4AF37; color: #0A4A2F; border-color: #0A4A2F; margin-top: 10px;">
+            ✉️ Submit RSVP ✉️
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
-  <!-- ===== EVENTS SECTION ===== -->
-  <section id="events" class="section section-alt">
-    <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Celebrations</h2>
-      <p class="section-sub">Join us for every blessed moment</p>
-    </div>
-
-    <div class="events-grid">
-
-      <!-- Nikah -->
-      <div class="event-card main-event highlight-event reveal">
-        <div class="event-venue-img highlight-venue"><img src="images/venue.jpg" alt="Archana Auditorium" /></div>
-        <div class="event-badge">Grand Nikah</div>
-        <div class="event-icon">☪️</div>
-        <div class="event-date-tag">06 September 2026</div>
-        <h3 class="event-name">Nikah Ceremony</h3>
-        <div class="event-details">
-          <p class="event-time">⏰ 11:30 a.m. – 12:30 p.m.</p>
-          <p class="event-venue">📍 Archana Auditorium</p>
-          <p class="event-location">Kalluvettankuzhi, Vizhinjam</p>
-          <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank" class="event-map-btn gold-btn">🗺️ Get Directions</a>
-        </div>
-      </div>
-
-      <!-- Reception -->
-      <div class="event-card main-event reveal">
-        <div class="event-venue-img"><img src="images/venue-rk.jpg" onerror="this.src='images/venue.jpg';" alt="Balakrishna Kalyana Mandapam" /></div>
-        <div class="event-icon">🎊</div>
-        <div class="event-date-tag">06 September 2026</div>
-        <h3 class="event-name">Reception</h3>
-        <div class="event-details">
-          <p class="event-time">⏰ 5:00 p.m. – 9:00 p.m.</p>
-          <p class="event-venue">📍 Balakrishna Kalyana Mandapam</p>
-          <p class="event-location">Thirumala</p>
-          <a href="https://maps.app.goo.gl/search/Balakrishna+Kalyana+Mandapam+Thirumala" target="_blank" class="event-map-btn">🗺️ Get Directions</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== FAMILY SECTION ===== -->
-  <section id="family" class="section">
-    <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Our Families</h2>
-      <p class="section-sub">Two families, one beautiful union</p>
-    </div>
-
-    <div class="family-grid">
-
-      <!-- Bride's Family -->
-      <div class="family-card reveal">
-        <div class="family-card-header bride-header">
-          <div class="family-icon">👰</div>
-          <h3>Bride's Family</h3>
-          <p class="family-name-title">Ahina M</p>
-        </div>
-        <div class="family-members">
-          <div class="member">
-            <span class="member-role">Father</span>
-            <span class="member-name">Mr. Shamsudeen</span>
-          </div>
-          <div class="member">
-            <span class="member-role">Mother</span>
-            <span class="member-name">Mrs. Majitha</span>
-          </div>
-          <div class="member-divider">— Address —</div>
-          <div class="member">
-            <span class="member-role">Residence</span>
-            <span class="member-name" style="font-size:0.9rem; font-family:'Lato', sans-serif;">TC 107/19, Pananinnavila, Harbour Road, Vizhinjam P.O., Thiruvananthapuram</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Groom's Family -->
-      <div class="family-card reveal">
-        <div class="family-card-header groom-header">
-          <div class="family-icon">🤵</div>
-          <h3>Groom's Family</h3>
-          <p class="family-name-title">Ahammed Shamim</p>
-        </div>
-        <div class="family-members">
-          <div class="member">
-            <span class="member-role">Father</span>
-            <span class="member-name">Mr. Shahabudheen A.</span>
-          </div>
-          <div class="member">
-            <span class="member-role">Mother</span>
-            <span class="member-name">Mrs. Vaseela</span>
-          </div>
-          <div class="member-divider">— Address —</div>
-          <div class="member">
-            <span class="member-role">Residence</span>
-            <span class="member-name" style="font-size:0.9rem; font-family:'Lato', sans-serif;">C 48, Sree Chitra Nagar, Pangode, Thirumala P.O., Thiruvananthapuram</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== GALLERY SECTION ===== -->
-  <section id="gallery" class="section section-alt">
-    <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Gallery</h2>
-      <p class="section-sub">Moments to cherish forever</p>
-    </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <div class="gallery-placeholder reveal">
-        <div class="placeholder-icon">📸</div>
-        <p>Beautiful photos coming soon…</p>
-        <span>Pre-nikah photoshoot</span>
-      </div>
-      <div class="gallery-placeholder reveal">
-        <div class="placeholder-icon">🎥</div>
-        <p>Highlight reel coming soon…</p>
-        <span>Nikah video</span>
-      </div>
-      <div class="gallery-placeholder reveal">
-        <div class="placeholder-icon">🌿</div>
-        <p>Mehendi moments…</p>
-        <span>Mehendi album</span>
-      </div>
-      <div class="gallery-placeholder reveal">
-        <div class="placeholder-icon">💃</div>
-        <p>Reception memories…</p>
-        <span>Reception album</span>
-      </div>
-    </div>
-    <p class="gallery-note">🌟 Photos &amp; videos will be uploaded after the events. Stay tuned!</p>
-  </section>
-
-  <!-- ===== DUAS / WISHES SECTION ===== -->
+  <!-- ===== THE SACRED GUEST BOOK (Dynamic Cloudflare API) ===== -->
   <section id="wishes" class="section">
     <div class="section-header">
-      <div class="crescent-divider">🌙</div>
-      <h2 class="section-title">Send Your Duas</h2>
-      <p class="section-sub">Shower the couple with your love &amp; prayers</p>
+      <div class="lotus-divider">☪️</div>
+      <h2 class="section-title">The Guest Book</h2>
+      <p class="section-sub">Share your love, prayers, &amp; blessings with us</p>
     </div>
+    
     <div class="wishes-container">
-      <form class="wishes-form reveal" id="wishesForm">
+      <div class="guestbook-invite reveal">
+        <p class="guestbook-invite-text">
+          We would be deeply honored to receive your prayers, blessings, and warm wishes as we step into this sacred covenant.
+        </p>
+        <button class="open-guestbook-btn" id="openGuestBook" style="background:#0A4A2F;">
+          🌙 Send Your Duas 🌙
+        </button>
+      </div>
+
+      <!-- Live blessings display container -->
+      <div class="wishes-display" id="wishesDisplay">
+        <!-- Dynamic database blessings load here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE GUEST BOOK POPUP MODAL ===== -->
+  <div class="guestbook-modal" id="guestBookModal">
+    <div class="guestbook-modal-content">
+      <button class="guestbook-close" id="closeGuestBook" aria-label="Close Modal">✕</button>
+      <div class="guestbook-header">
+        <span class="guestbook-mandala">☪️</span>
+        <h2 style="color:#0A4A2F;">Send Your Duas</h2>
+        <p>Your blessings will be displayed live on our website</p>
+      </div>
+      <form class="wishes-form" id="wishesForm">
         <div class="form-group">
           <label for="wisher-name">Your Name</label>
           <input type="text" id="wisher-name" placeholder="Enter your name" required />
         </div>
         <div class="form-group">
           <label for="wisher-relation">Relation to Couple</label>
-          <input type="text" id="wisher-relation" placeholder="e.g. Friend, Uncle, Colleague" />
+          <input type="text" id="wisher-relation" placeholder="e.g. Friend, Uncle, Cousin" />
         </div>
         <div class="form-group">
           <label for="wisher-message">Your Dua / Message</label>
-          <textarea id="wisher-message" rows="4" placeholder="Write your heartfelt wishes and duas..." required></textarea>
+          <textarea id="wisher-message" rows="4" placeholder="Write your heartfelt message..." required></textarea>
         </div>
-        <button type="submit" class="submit-btn" id="submitWish">
-          🌙 Send Duas 🌙
+        <button type="submit" class="submit-btn" id="submitWish" style="background:#D4AF37; color:#0A4A2F; border-color:#0A4A2F;">
+          🌙 Leave Blessings 🌙
         </button>
       </form>
-
-      <div class="wishes-display" id="wishesDisplay"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== QR CODE DIRECTIONS ===== -->
+
+
+  <!-- ===== DIRECTIONS / VENUE GEOMETRIC MAP ===== -->
   <section id="directions" class="section section-alt">
     <div class="section-header">
-      <div class="crescent-divider">🌙</div>
+      <div class="lotus-divider">☪️</div>
       <h2 class="section-title">Find the Venue</h2>
       <p class="section-sub">Archana Auditorium, Kalluvettankuzhi, Vizhinjam</p>
     </div>
+    
     <div class="qr-wrapper reveal">
-      <div class="qr-card">
+      <div class="qr-card geometric-map-frame" id="qrCardTilt">
         <div class="qr-venue-photo">
-          <img src="images/venue.jpg" alt="Nikah Venue" />
-          <div class="qr-venue-overlay">
+          <img src="images/venue.jpg" alt="Archana Auditorium" />
+          <div class="qr-venue-overlay" style="background: rgba(10, 74, 47, 0.8);">
             <h3>Archana Auditorium</h3>
-            <p>Kalluvettankuzhi, Vizhinjam</p>
+            <p>Vizhinjam</p>
           </div>
         </div>
         <div class="qr-code-block">
@@ -488,14 +460,14 @@
             <div class="qr-corner qr-br"></div>
             <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank">
               <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam&color=0A4A2F&bgcolor=FFF8ED&margin=10"
-                alt="QR Code - Venue Directions"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam&color=0A4A2F&bgcolor=FFFDF9&margin=10"
+                alt="QR Code - Directions"
                 class="qr-img"
               />
             </a>
           </div>
           <p class="qr-sub">Or click the QR code to open in Google Maps</p>
-          <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank" class="directions-btn">
+          <a href="https://maps.app.goo.gl/search/Archana+Auditorium+Kalluvettankuzhi+Vizhinjam" target="_blank" class="directions-btn" style="border-color:#0A4A2F; color:#0A4A2F;">
             🗺️ Open in Google Maps
           </a>
         </div>
@@ -505,26 +477,29 @@
 
   <!-- ===== FOOTER ===== -->
   <footer id="footer">
-    <div class="footer-crescent">☪️</div>
+    <div class="footer-shloka-watermark" style="font-family:'Amiri', serif;">
+      بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+    </div>
+
+    <div class="footer-mandala">☪️</div>
     <div class="footer-names">
       <span class="footer-name">Ahammed Shamim</span>
       <span class="footer-amp">💕</span>
       <span class="footer-name">Ahina M</span>
     </div>
-    <p class="footer-date">06 September 2026 | Rabi' al-Awwal 25</p>
-    <p class="footer-ayah" style="font-size: 1.4rem; font-weight: bold; margin-bottom: 5px;">
-      بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
-    </p>
-    <p class="footer-ayah" style="margin-bottom: 5px;">
-      <em>Barakallahu laka wa baraka 'alayka wa jama'a baynakuma fi khayr.</em>
-    </p>
-    <p class="footer-ayah" style="font-size: 0.95rem;">
-      "May Allah bless you, shower His blessings upon you, and unite both of you in goodness."
-    </p>
-    <div class="footer-divider">• • •</div>
-    <p class="footer-credit" style="color: var(--gold-light); font-size: 1rem; margin-bottom: 5px;">Awaiting your presence</p>
-    <p class="footer-credit" style="color: rgba(255,253,248,0.7); font-size: 1rem; margin-bottom: 15px;">With Best Compliments:<br>Kuthusiya, Ashik &amp; Fayaz</p>
     
+    <p style="margin-top:20px; font-family:'Amiri', serif; font-size:1.8rem; font-weight:bold; color:#D4AF37;">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+    <p style="font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.2rem; color:#FFFDF9; margin-bottom:5px;">Barakallahu laka wa baraka 'alayka wa jama'a baynakuma fi khayr.</p>
+    <p style="font-family:'Poppins', sans-serif; font-size:0.85rem; color:#D4AF37; margin-bottom:30px; letter-spacing:1px; text-transform:uppercase;">"May Allah bless you, shower His blessings upon you, and unite both of you in goodness."</p>
+
+    <div style="width:60px; height:2px; background:#D4AF37; margin:0 auto 30px;"></div>
+    
+    <p style="font-family:'Poppins', sans-serif; font-size:0.9rem; color:#FFFDF9; letter-spacing:2px; text-transform:uppercase; font-weight:600; margin-bottom:10px;">Awaiting your presence</p>
+    <p style="font-family:'Playfair Display', serif; font-size:1.4rem; color:#D4AF37; font-weight:bold; margin-bottom:50px;">Hosted By:<br>Mr. Shahabudheen A. &amp; Mrs. Vaseela</p>
+    
+    <p style="font-family:'Poppins', sans-serif; font-size:0.8rem; color:#FFFDF9; letter-spacing:1px; opacity:0.8; margin-bottom:5px;">With Best Compliments:</p>
+    <p style="font-family:'Playfair Display', serif; font-size:1.2rem; color:#D4AF37; margin-bottom:40px;">Kuthusiya, Ashik &amp; Fayaz</p>
+
     <div class="footer-dev-divider"></div>
     <p class="footer-dev">
       &copy; 2026 Developed by <strong>Varun Satheesh</strong>

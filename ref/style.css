@@ -1,9 +1,9 @@
 /* ===== THE ROYAL TEMPLE DESIGN SYSTEM ===== */
 :root {
-  --royal-blue: #0A4A2F;
-  --royal-blue-light: #052617;
-  --gold: #D4AF37;
-  --gold-light: #F0D575;
+  --royal-blue: #0B1B3D;
+  --royal-blue-light: #162E5C;
+  --gold: #C9A961;
+  --gold-light: #DFCA9B;
   --ivory: #FFFDF9;
   --ivory-dark: #F6F3EB;
   --pink: #F4D5E3;
@@ -12,9 +12,9 @@
   --charcoal: #2C2C2C;
   --white: #ffffff;
   --glass-surface: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(212, 175, 55, 0.25);
-  --shadow-soft: 0 16px 45px rgba(10, 74, 47, 0.05);
-  --shadow-glow: 0 0 30px rgba(212, 175, 55, 0.3);
+  --glass-border: rgba(201, 169, 97, 0.25);
+  --shadow-soft: 0 16px 45px rgba(11, 27, 61, 0.05);
+  --shadow-glow: 0 0 30px rgba(201, 169, 97, 0.3);
   --transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   --radius: 1.5rem;
 }
@@ -44,8 +44,8 @@ h1, h2, h3, .font-serif {
 }
 
 @keyframes musicPulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 8px 30px rgba(212, 175, 55,0.45); }
-  50% { transform: scale(1.06); box-shadow: 0 12px 40px rgba(212, 175, 55,0.7); }
+  0%, 100% { transform: scale(1); box-shadow: 0 8px 30px rgba(201,169,97,0.45); }
+  50% { transform: scale(1.06); box-shadow: 0 12px 40px rgba(201,169,97,0.7); }
 }
 
 /* ===== CUSTOM CURSOR (Luxury Golden Dot) ===== */
@@ -64,7 +64,7 @@ h1, h2, h3, .font-serif {
   }
   .custom-cursor.morph-lotus {
     width: 44px; height: 44px;
-    background-color: rgba(212, 175, 55, 0.1);
+    background-color: rgba(201, 169, 97, 0.1);
     border: 1.5px solid var(--gold);
     border-radius: 50% 10% 50% 10%;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -148,7 +148,7 @@ h1, h2, h3, .font-serif {
 }
 .hero-video-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(10, 74, 47, 0.15) 0%, rgba(10, 74, 47, 0.35) 100%);
+  background: linear-gradient(to bottom, rgba(11, 27, 61, 0.15) 0%, rgba(11, 27, 61, 0.35) 100%);
   z-index: 2;
 }
 .particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
@@ -167,7 +167,7 @@ h1, h2, h3, .font-serif {
 /* Authentic pristine high-res Lord Ganesha centered top */
 .hero-ganesha {
   width: 120px; height: 120px; margin-bottom: 12px;
-  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+  filter: drop-shadow(0 0 10px rgba(201, 169, 97, 0.5));
 }
 .ganesha-img-center {
   width: 100%; height: 100%; object-fit: contain;
@@ -190,12 +190,12 @@ h1, h2, h3, .font-serif {
   font-family: 'Playfair Display', serif;
   font-weight: 300; font-size: clamp(3.2rem, 8vw, 7.5rem);
   color: var(--gold); line-height: 1;
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  text-shadow: 0 0 15px rgba(201, 169, 97, 0.2);
   animation: heartbeat-gold 2.5s infinite ease-in-out;
 }
 @keyframes heartbeat-gold {
-  0%, 100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
-  50% { text-shadow: 0 0 35px rgba(212, 175, 55, 0.65); color: var(--ivory); }
+  0%, 100% { text-shadow: 0 0 10px rgba(201, 169, 97, 0.2); }
+  50% { text-shadow: 0 0 35px rgba(201, 169, 97, 0.65); color: var(--ivory); }
 }
 .temple-hero-countdown .count-block-text label {
   font-family: 'Poppins', sans-serif; font-weight: 600;
@@ -204,7 +204,7 @@ h1, h2, h3, .font-serif {
 }
 .temple-hero-countdown .count-sep-text {
   font-family: 'Playfair Display', serif; font-weight: 300;
-  font-size: clamp(2.2rem, 6vw, 5rem); color: rgba(212, 175, 55, 0.3);
+  font-size: clamp(2.2rem, 6vw, 5rem); color: rgba(201, 169, 97, 0.3);
   margin-top: -30px;
 }
 
@@ -213,7 +213,7 @@ h1, h2, h3, .font-serif {
   display: flex; justify-content: center; align-items: center; gap: 14px;
   flex-wrap: wrap; margin-bottom: 35px; max-width: 900px;
   background: rgba(255, 255, 255, 0.05); padding: 12px 24px;
-  border-radius: 40px; border: 1.2px solid rgba(212, 175, 55, 0.15);
+  border-radius: 40px; border: 1.2px solid rgba(201, 169, 97, 0.15);
 }
 .temple-date-item {
   font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.74rem;
@@ -241,7 +241,7 @@ h1, h2, h3, .font-serif {
 }
 .venue-link-overlay {
   display: inline-flex; align-items: center; gap: 10px;
-  text-decoration: none; background: rgba(10, 74, 47, 0.85);
+  text-decoration: none; background: rgba(11, 27, 61, 0.85);
   border: 1.5px solid var(--gold); border-radius: 40px;
   padding: 10px 28px; transition: var(--transition);
 }
@@ -279,7 +279,7 @@ h1, h2, h3, .font-serif {
   background: var(--royal-blue);
   transform: rotate(-1.5deg);
   border-top: 1.5px solid var(--gold); border-bottom: 1.5px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(10, 74, 47, 0.25);
+  box-shadow: 0 10px 30px rgba(11, 27, 61, 0.25);
   z-index: 11;
 }
 .ribbon-bottom {
@@ -346,7 +346,7 @@ h1, h2, h3, .font-serif {
 .temple-couple-photo-frame {
   position: relative; width: 100%; aspect-ratio: 1 / 1;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(10, 74, 47, 0.15);
+  box-shadow: 0 20px 50px rgba(11, 27, 61, 0.15);
   border: 2px solid var(--gold);
   transition: var(--transition);
 }
@@ -362,7 +362,7 @@ h1, h2, h3, .font-serif {
 }
 .temple-couple-photo-frame:hover {
   transform: scale(1.02) translateY(-6px);
-  box-shadow: 0 30px 65px rgba(10, 74, 47, 0.22), var(--shadow-glow);
+  box-shadow: 0 30px 65px rgba(11, 27, 61, 0.22), var(--shadow-glow);
 }
 .temple-couple-img {
   width: 100%; height: 100%; object-fit: cover;
@@ -382,7 +382,7 @@ h1, h2, h3, .font-serif {
   display: flex; flex-direction: column; align-items: flex-start;
 }
 .temple-badge {
-  display: inline-block; background: rgba(10, 74, 47, 0.05);
+  display: inline-block; background: rgba(11, 27, 61, 0.05);
   border: 1.2px solid var(--royal-blue); color: var(--royal-blue);
   font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
   padding: 4px 14px; border-radius: 20px; font-weight: 700;
@@ -435,7 +435,7 @@ h1, h2, h3, .font-serif {
 }
 .pre-wedding-card:hover {
   transform: translateY(-8px); border-color: var(--gold);
-  box-shadow: 0 20px 40px rgba(10, 74, 47,0.08), var(--shadow-glow);
+  box-shadow: 0 20px 40px rgba(11,27,61,0.08), var(--shadow-glow);
 }
 .pre-card-badge {
   display: inline-block; background: rgba(31, 79, 63, 0.08); border: 1.2px solid var(--emerald);
@@ -453,7 +453,7 @@ h1, h2, h3, .font-serif {
   margin-bottom: 24px;
 }
 .pre-card-footer {
-  border-top: 1px solid rgba(212, 175, 55, 0.15); padding-top: 16px;
+  border-top: 1px solid rgba(201, 169, 97, 0.15); padding-top: 16px;
 }
 .pre-status {
   font-family: 'Poppins', sans-serif; font-size: 0.72rem; letter-spacing: 2px;
@@ -489,7 +489,7 @@ h1, h2, h3, .font-serif {
 }
 .carousel-card:hover {
   transform: scale(1.02) translateY(-6px); border-color: var(--gold);
-  box-shadow: 0 25px 50px rgba(10, 74, 47,0.12), var(--shadow-glow);
+  box-shadow: 0 25px 50px rgba(11,27,61,0.12), var(--shadow-glow);
 }
 .carousel-control {
   width: 48px; height: 48px; border-radius: 50%;
@@ -511,15 +511,15 @@ h1, h2, h3, .font-serif {
 
 .card-header-block { padding: 24px 24px 12px; }
 .card-badge {
-  display: inline-block; background: rgba(10, 74, 47, 0.05); border: 1.2px solid var(--royal-blue);
+  display: inline-block; background: rgba(11, 27, 61, 0.05); border: 1.2px solid var(--royal-blue);
   color: var(--royal-blue); font-size: 0.6rem; letter-spacing: 1.5px;
   text-transform: uppercase; padding: 4px 10px; border-radius: 20px; font-weight: 700;
   margin-bottom: 12px; font-family: 'Poppins', sans-serif;
 }
 .card-body-block { padding: 0 24px 24px; flex-grow: 1; }
 .card-actions-block {
-  padding: 16px 24px 24px; border-top: 1px solid rgba(212, 175, 55, 0.15);
-  background: rgba(10, 74, 47, 0.02);
+  padding: 16px 24px 24px; border-top: 1px solid rgba(201, 169, 97, 0.15);
+  background: rgba(11, 27, 61, 0.02);
 }
 
 .event-massive-date {
@@ -566,7 +566,7 @@ h1, h2, h3, .font-serif {
 }
 .journey-timeline-line {
   position: absolute; top: 0; bottom: 0; left: 50%; width: 2px;
-  background: rgba(212, 175, 55, 0.25); transform: translateX(-50%);
+  background: rgba(201, 169, 97, 0.25); transform: translateX(-50%);
 }
 .journey-progress {
   position: absolute; top: 0; left: 0; width: 100%; height: 0%;
@@ -632,12 +632,12 @@ h1, h2, h3, .font-serif {
 /* Highlight timeline card */
 .journey-highlight-card {
   border-color: var(--gold);
-  background: rgba(10, 74, 47, 0.03);
-  box-shadow: 0 20px 40px rgba(10, 74, 47,0.08), var(--shadow-glow);
+  background: rgba(11, 27, 61, 0.03);
+  box-shadow: 0 20px 40px rgba(11,27,61,0.08), var(--shadow-glow);
 }
 .journey-item:hover .journey-card {
   transform: scale(1.02); border-color: var(--gold);
-  box-shadow: 0 20px 45px rgba(10, 74, 47,0.08), var(--shadow-glow);
+  box-shadow: 0 20px 45px rgba(11,27,61,0.08), var(--shadow-glow);
 }
 .journey-item:hover .journey-marker {
   background: var(--royal-blue); border-color: var(--gold); color: var(--ivory);
@@ -700,7 +700,7 @@ h1, h2, h3, .font-serif {
 .eng-slider-wrapper {
   position: relative; max-width: 1000px; margin: 0 auto; overflow: hidden;
   background: var(--royal-blue); border-radius: var(--radius);
-  border: 2px solid var(--gold); box-shadow: 0 30px 60px rgba(10, 74, 47, 0.15);
+  border: 2px solid var(--gold); box-shadow: 0 30px 60px rgba(11, 27, 61, 0.15);
 }
 .eng-slider {
   display: flex; width: 100%; height: 600px;
@@ -721,12 +721,12 @@ h1, h2, h3, .font-serif {
   object-fit: contain; object-position: center; display: block; z-index: 1;
   border: 1.5px solid var(--gold); border-radius: 8px;
   box-shadow: 0 20px 45px rgba(0,0,0,0.6);
-  padding: 10px; background: rgba(10, 74, 47, 0.4);
+  padding: 10px; background: rgba(11, 27, 61, 0.4);
 }
 .eng-slide-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
   padding: 70px 40px 30px;
-  background: linear-gradient(to top, var(--royal-blue) 0%, rgba(10, 74, 47, 0.5) 60%, transparent 100%);
+  background: linear-gradient(to top, var(--royal-blue) 0%, rgba(11, 27, 61, 0.5) 60%, transparent 100%);
   color: var(--ivory); font-family: 'Cormorant Garamond', serif;
   font-size: 1.25rem; font-weight: 400; font-style: italic; text-align: center;
   z-index: 2;
@@ -764,7 +764,7 @@ h1, h2, h3, .font-serif {
 
 .eng-date-badge {
   position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
-  background: rgba(10, 74, 47, 0.9); border: 1px solid var(--gold); border-radius: 30px;
+  background: rgba(11, 27, 61, 0.9); border: 1px solid var(--gold); border-radius: 30px;
   color: var(--gold-light); padding: 8px 24px;
   font-size: 0.68rem; letter-spacing: 2px; font-weight: 700;
   white-space: nowrap; z-index: 20; font-family: 'Poppins', sans-serif; text-transform: uppercase;
@@ -792,8 +792,8 @@ h1, h2, h3, .font-serif {
   padding: 36px 30px 26px; text-align: center;
   border-bottom: 1.5px solid var(--glass-border);
 }
-.bride-header { background: linear-gradient(135deg, rgba(10, 74, 47, 0.04) 0%, transparent 100%); }
-.groom-header { background: linear-gradient(135deg, rgba(212, 175, 55, 0.04) 0%, transparent 100%); }
+.bride-header { background: linear-gradient(135deg, rgba(11, 27, 61, 0.04) 0%, transparent 100%); }
+.groom-header { background: linear-gradient(135deg, rgba(201, 169, 97, 0.04) 0%, transparent 100%); }
 .family-icon { font-size: 2.2rem; margin-bottom: 8px; }
 .family-card-header h3 {
   font-family: 'Playfair Display', serif; font-size: 1.3rem;
@@ -805,7 +805,7 @@ h1, h2, h3, .font-serif {
 .family-members { padding: 24px 30px; }
 .member {
   display: flex; flex-direction: column; padding: 14px 0;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid rgba(201, 169, 97, 0.1);
 }
 .member:last-child { border-bottom: none; }
 .member-role { font-size: 0.65rem; color: var(--charcoal); opacity: 0.8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; font-family: 'Poppins', sans-serif; font-weight: 600; }
@@ -823,7 +823,7 @@ h1, h2, h3, .font-serif {
   transition: var(--transition); cursor: pointer;
   backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
 }
-.gallery-placeholder:hover { border-color: var(--royal-blue); background: rgba(10, 74, 47, 0.02); }
+.gallery-placeholder:hover { border-color: var(--royal-blue); background: rgba(11, 27, 61, 0.02); }
 .placeholder-icon { font-size: 2.6rem; margin-bottom: 14px; color: var(--royal-blue); }
 .gallery-placeholder p { color: var(--royal-blue); font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 6px; font-weight: 700; }
 .gallery-placeholder span { color: var(--charcoal); opacity: 0.8; font-size: 0.78rem; font-family: 'Poppins', sans-serif; }
@@ -866,7 +866,7 @@ h1, h2, h3, .font-serif {
 /* ===== THE GUEST BOOK POPUP MODAL ===== */
 .guestbook-modal {
   position: fixed; inset: 0; z-index: 10000;
-  background: rgba(10, 74, 47, 0.45); backdrop-filter: blur(15px);
+  background: rgba(11, 27, 61, 0.45); backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   display: flex; align-items: center; justify-content: center;
   opacity: 0; pointer-events: none; transition: var(--transition);
@@ -878,7 +878,7 @@ h1, h2, h3, .font-serif {
 .guestbook-modal-content {
   background: var(--ivory); border-radius: var(--radius);
   max-width: 580px; width: 100%; padding: 45px 36px;
-  border: 2.5px solid var(--gold); box-shadow: 0 30px 70px rgba(10, 74, 47, 0.4);
+  border: 2.5px solid var(--gold); box-shadow: 0 30px 70px rgba(11, 27, 61, 0.4);
   position: relative; transform: scale(0.9); transition: var(--transition);
 }
 .guestbook-modal.open .guestbook-modal-content {
@@ -911,7 +911,7 @@ h1, h2, h3, .font-serif {
   transition: var(--transition); outline: none;
 }
 .form-group input:focus, .form-group textarea:focus {
-  border-color: var(--royal-blue); box-shadow: 0 0 0 3px rgba(10, 74, 47, 0.1); background: var(--white);
+  border-color: var(--royal-blue); box-shadow: 0 0 0 3px rgba(11, 27, 61, 0.1); background: var(--white);
 }
 .submit-btn {
   width: 100%; padding: 18px;
@@ -954,7 +954,7 @@ h1, h2, h3, .font-serif {
 .qr-venue-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.9); }
 .qr-venue-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(10, 74, 47, 0.9) 0%, rgba(10, 74, 47, 0.2) 70%, transparent 100%);
+  background: linear-gradient(to top, rgba(11, 27, 61, 0.9) 0%, rgba(11, 27, 61, 0.2) 70%, transparent 100%);
   display: flex; flex-direction: column; justify-content: flex-end; padding: 32px;
 }
 .qr-venue-overlay h3 {
@@ -1024,7 +1024,7 @@ h1, h2, h3, .font-serif {
 .footer-credit { color: var(--charcoal); opacity: 0.75; font-size: 0.78rem; }
 
 .footer-dev-divider {
-  width: 140px; height: 1px; background: rgba(212, 175, 55, 0.15);
+  width: 140px; height: 1px; background: rgba(201, 169, 97, 0.15);
   margin: 20px auto 16px; position: relative; z-index: 1;
 }
 .footer-dev {
@@ -1067,7 +1067,7 @@ h1, h2, h3, .font-serif {
     display: none; flex-direction: column; position: absolute; top: 100%;
     left: 0; right: 0; background: rgba(255, 253, 249, 0.98);
     padding: 30px; gap: 24px; border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 10px 30px rgba(10, 74, 47,0.1);
+    box-shadow: 0 10px 30px rgba(11,27,61,0.1);
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
